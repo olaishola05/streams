@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {% if title %}
+        <title>{{ title }} - Streams</title>
+
+        {% else %}
+        <title>Streams</title>
+        {% endif %}
+
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+            crossorigin="anonymous"
+        />
+
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="./img/sf.png" />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarTogglerDemo03"
+                    aria-controls="navbarTogglerDemo03"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('home')}}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('explore')}}">Listen Now</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('about')}}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('contact')}}">Contact</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('register')}}">Signup</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        {% block body %} {% endblock %}
+
+        <!-- <div class="foot">
+            <footer>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, aspernatur!</p>
+            </footer>
+        </div> -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
