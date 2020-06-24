@@ -20,17 +20,24 @@ html {
 }
 
 .nav-item {
-    float: left;
+    float: right;
 }
 
 .main {
     background: #ade7fe;
-    width: 100%;
+    width: 85%;
     height: 570px;
     border-radius: 8px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2em;
+    margin-top: 1em;
+    padding-top: 7em;
+    padding-bottom: 7em;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
 }
 
 .head {
@@ -40,15 +47,11 @@ html {
     border-radius: 8px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.form-container {
-    display: flex;
-    flex-direction: row;
+    /* margin-top: 6em; */
 }
 
 .content {
-    width: 100%;
+    width: 70%;
     margin: 2em;
     padding: 2em;
 }
@@ -56,6 +59,13 @@ html {
 .content h1 {
     color: #fed1ae;
     margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.searchBtn {
+    margin-left: 0.8em;
+    background: #ade7fe;
+    color: white;
 }
 .image {
     width: 100%;
@@ -65,4 +75,16 @@ html {
 }
 .emp {
     color: #ade7fe;
+    font-weight: bold;
+}
+.logo {
+    width: 50px;
+    height: 25px;
+}
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
