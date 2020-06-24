@@ -36,23 +36,24 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo03">
                     <ul class="nav mt-2 mt-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="{{url_for('home')}}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url_for('explore')}}">Listen Now</a>
+                            <a class="nav-link" id="explore" href="{{url_for('explore')}}">Listen Now</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{url_for('about')}}">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url_for('contact')}}">Contact</a>
+                            <a class="nav-link" data-toggle="modal" data-target="#modalContactForm" href="{{url_for('contact')}}">Contact</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url_for('register')}}">Signup</a>
+                            <a class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLRForm" href="{{url_for('register')}}">SignUp</a>
+                            <!--  -->
                         </li>
                     </ul>
                 </div>
@@ -68,5 +69,7 @@
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script src="static/JS/app.js"></script>
     </body>
 </html>
